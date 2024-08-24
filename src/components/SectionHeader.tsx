@@ -1,5 +1,3 @@
-import React from 'react'
-
 export const SectionHeader = ({ eyebrow, title, description }: { eyebrow: string, title: string, description: string }) => {
     return (
         <>
