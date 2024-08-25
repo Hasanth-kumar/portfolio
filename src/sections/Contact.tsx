@@ -15,7 +15,7 @@ export const ContactSection = () => {
               <p className="text-sm md:text-base mt-2">Ready to bring your next project to life? Let&apos;s connect and discuss how I can help you achieve your goals.</p>
             </div>
             <div>
-              <button className="inline-flex text-white bg-gray-900 items-center px-6 h-12 rounded-xl gap-2 w-max border border-gray-900">
+              <button className="inline-flex text-white bg-gray-900 items-center px-6 h-12 rounded-xl gap-2 w-max border border-gray-900 hover:-rotate-3 transition duration-300">
                 <span className="font-semibold">Contact Me</span>
                 <ArrowUpRightIcon className="size-4" />
               </button>
