@@ -11,7 +11,7 @@ I'm **Hasanth Kumar Majji**, a passionate software developer based in Hyderabad,
 
 ## 🚀 Live Portfolio
 
-Check out my live portfolio: [Portfolio Link](https://your-deployment-url.com)
+Check out my live portfolio: [Portfolio Link](https://portfolio-5km86sit9-hasanth-kumars-projects.vercel.app)
 
 ## 🛠️ Tech Stack
 

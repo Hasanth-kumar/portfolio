@@ -22,6 +22,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
+    url: "https://portfolio-5km86sit9-hasanth-kumars-projects.vercel.app",
     siteName: "Hasanth Kumar Majji Portfolio",
     title: "Hasanth Kumar Majji - Software Developer Portfolio",
     description: "Full-stack software developer specializing in React, Next.js, Spring Boot, and modern web technologies. View my projects and get in touch for collaborations.",
