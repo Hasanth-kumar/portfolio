@@ -22,31 +22,20 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://your-deployment-url.com",
     siteName: "Hasanth Kumar Majji Portfolio",
     title: "Hasanth Kumar Majji - Software Developer Portfolio",
     description: "Full-stack software developer specializing in React, Next.js, Spring Boot, and modern web technologies. View my projects and get in touch for collaborations.",
-    images: [
-      {
-        url: "/og-image.png", // You can add a custom OG image later
-        width: 1200,
-        height: 630,
-        alt: "Hasanth Kumar Majji - Software Developer Portfolio",
-      },
-    ],
   },
   twitter: {
-    card: "summary_large_image",
+    card: "summary",
     title: "Hasanth Kumar Majji - Software Developer Portfolio",
     description: "Full-stack software developer specializing in React, Next.js, Spring Boot, and modern web technologies.",
-    images: ["/og-image.png"], // Same image for Twitter
-    creator: "@your-twitter-handle", // Add your Twitter handle if you have one
   },
   viewport: "width=device-width, initial-scale=1",
   category: "technology",
   classification: "portfolio",
   other: {
-    "theme-color": "#111827", // Dark theme color
+    "theme-color": "#111827",
     "msapplication-TileColor": "#111827",
     "apple-mobile-web-app-capable": "yes",
     "apple-mobile-web-app-status-bar-style": "black-translucent",
