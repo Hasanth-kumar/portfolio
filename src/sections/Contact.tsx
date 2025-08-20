@@ -12,7 +12,18 @@ export const ContactSection = () => {
           <div className="flex flex-col md:flex-row gap-8 md:gap-16 items-center">
             <div>
               <h2 className="font-serif text-2xl md:text-3xl">Let&apos;s create something amazing together</h2>
-              <p className="text-sm md:text-base mt-2">Ready to bring your next project to life? Let&apos;s connect and discuss how I can help you achieve your goals.</p>
+              <p className="text-sm md:text-base mt-2">I'm always excited to work on innovative projects and collaborate with like-minded professionals. Let's connect!</p>
+              <div className="mt-4 text-sm">
+                <p>
+                  📧 <a 
+                    href="mailto:hasanthkumarmajji@gmail.com" 
+                    className="text-gray-900 hover:text-gray-700 underline decoration-2 underline-offset-2 transition-colors"
+                  >
+                    hasanthkumarmajji@gmail.com
+                  </a>
+                </p>
+                <p>📍 Hyderabad, Telangana</p>
+              </div>
             </div>
             <div>
               <button className="inline-flex text-white bg-gray-900 items-center px-6 h-12 rounded-xl gap-2 w-max border border-gray-900 hover:-rotate-3 transition duration-300">

@@ -1,4 +1,7 @@
+"use client";
+
 import Image from "next/image";
+import { useEffect } from "react";
 
 import { HeroOrbit } from "@/components/HeroOrbit";
 
@@ -9,6 +12,39 @@ import StarIcon from "@/assets/icons/star.svg";
 import SparkleIcon from "@/assets/icons/sparkle.svg";
 
 export const HeroSection = () => {
+  const scrollToSection = (sectionId: string) => {
+    console.log(`Attempting to scroll to section: ${sectionId}`);
+    
+    // Try multiple selectors to find the section
+    const element = document.querySelector(`[data-section="${sectionId}"]`) || 
+                   document.getElementById(sectionId) ||
+                   document.querySelector(`#${sectionId}`);
+    
+    if (element) {
+      console.log(`Found element:`, element);
+      element.scrollIntoView({ 
+        behavior: 'smooth',
+        block: 'start'
+      });
+    } else {
+      console.log(`Element not found for section: ${sectionId}`);
+      // Fallback: scroll to top if section not found
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    }
+  };
+
+  // Debug: Log when component mounts and check for sections
+  useEffect(() => {
+    console.log('Hero component mounted');
+    const projectsSection = document.querySelector('[data-section="projects"]');
+    const contactSection = document.querySelector('[data-section="contact"]');
+    console.log('Projects section found:', !!projectsSection);
+    console.log('Contact section found:', !!contactSection);
+  }, []);
+
   return (
     <div className="py-32 md:py-48 lg:py-60 relative z-0 overflow-x-clip">
       <div className="absolute inset-0 [mask-image:linear-gradient(to_bottom,transparent,black_10%,black_70%,transparent)]">
@@ -64,17 +100,26 @@ export const HeroSection = () => {
           </div>
         </div>
         <div className="max-w-lg mx-auto">
-          <h1 className="font-serif text-3xl md:text-5xl text-center mt-8 tracking-wide">Building Exceptional User Experiences</h1>
+          <h1 className="font-serif text-3xl md:text-5xl text-center mt-8 tracking-wide">Hasanth Kumar Majji</h1>
           <p className="mt-4 text-center text-white/60 md:text-lg">
-            I specialize in transforming designs into functional, high-performing web applications. Let&apos;s discuss your next project.
+            Aspiring AI & ML Engineer | Full-Stack Developer | Problem Solver
+          </p>
+          <p className="mt-2 text-center text-white/40 text-sm">
+            📍 Hyderabad, Telangana
           </p>
         </div>
-        <div className="flex flex-col md:flex-row justify-center items-center mt-8 gap-4">
-          <button className="inline-flex items-center gap-2 border border-white/15 px-6 h-12 rounded-xl">
+        <div className="flex flex-col md:flex-row justify-center items-center mt-8 gap-4 relative z-10">
+          <button 
+            onClick={() => scrollToSection('projects')}
+            className="inline-flex items-center gap-2 border border-white/15 px-6 h-12 rounded-xl hover:bg-white/5 transition-colors duration-200 cursor-pointer relative z-10"
+          >
             <span className="font-semibold">Explore My Work</span>
             <ArrowDown className="size-4" />
           </button>
-          <button className="inline-flex items-center gap-2 border-white bg-white text-gray-900 h-12 px-6 rounded-xl">
+          <button 
+            onClick={() => scrollToSection('contact')}
+            className="inline-flex items-center gap-2 border-white bg-white text-gray-900 h-12 px-6 rounded-xl hover:bg-gray-100 transition-colors duration-200 cursor-pointer relative z-10"
+          >
             <span>🤝</span>
             <span className="font-semibold">Let&apos;s Connect</span>
           </button>

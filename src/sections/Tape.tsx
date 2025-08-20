@@ -3,17 +3,18 @@ import { Fragment } from "react";
 import StarIcon from "@/assets/icons/star.svg";
 
 const words = [
-  "Performant",
-  "Accessible",
-  "Secure",
-  "Interactive",
-  "Scalable",
-  "User Friendly",
-  "Responsive",
-  "Maintainable",
-  "Search Optimized",
-  "Usable",
-  "Reliable",
+  "Python",
+  "Java",
+  "JavaScript",
+  "AI & ML",
+  "React",
+  "Spring Boot",
+  "MongoDB",
+  "Node.js",
+  "TypeScript",
+  "Problem Solver",
+  "Full-Stack",
+  "Innovative",
 ];
 
 export const TapeSection = () => {

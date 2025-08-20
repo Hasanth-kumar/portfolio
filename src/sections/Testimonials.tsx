@@ -1,74 +1,94 @@
-import { Fragment } from "react";
-import Image from "next/image";
+"use client";
 
 import { SectionHeader } from "@/components/SectionHeader";
-import Card from "@/components/Card";
+import { portfolioData } from "@/data/portfolio";
+import { motion } from "framer-motion";
+import Image from "next/image";
 
-import memojiAvatar1 from "@/assets/images/memoji-avatar-1.png";
-import memojiAvatar2 from "@/assets/images/memoji-avatar-2.png";
-import memojiAvatar3 from "@/assets/images/memoji-avatar-3.png";
-import memojiAvatar4 from "@/assets/images/memoji-avatar-4.png";
-import memojiAvatar5 from "@/assets/images/memoji-avatar-5.png";
-
-const testimonials = [
-  {
-    name: "Alex Turner",
-    position: "Marketing Manager @ TechStartups",
-    text: "Alex was instrumental in transforming our website into a powerful marketing tool. His attention to detail and ability to understand our brand is exceptional. We're thrilled with the results!",
-    avatar: memojiAvatar1,
-  },
-  {
-    name: "Olivia Green",
-    position: "Head of Design @ GreenLeaf",
-    text: "Working with Alex was a pleasure. His expertise in frontend development brought our designs to life in a way we never imagined. The website has exceeded our expectations.",
-    avatar: memojiAvatar2,
-  },
-  {
-    name: "Daniel White",
-    position: "CEO @ InnovateCo",
-    text: "Alex's ability to create seamless user experiences is unmatched. Our website has seen a significant increase in conversions since launching the new design. We couldn't be happier.",
-    avatar: memojiAvatar3,
-  },
-  {
-    name: "Emily Carter",
-    position: "Product Manager @ GlobalTech",
-    text: "Alex is a true frontend wizard. He took our complex product and transformed it into an intuitive and engaging user interface. We're already seeing positive feedback from our customers.",
-    avatar: memojiAvatar4,
-  },
-  {
-    name: "Michael Brown",
-    position: "Director of IT @ MegaCorp",
-    text: "Alex's work on our website has been nothing short of exceptional. He's a talented developer who is also a great communicator. We highly recommend him.",
-    avatar: memojiAvatar5,
-  },
-];
+// Import memoji images for certifications
+import memoji1 from "@/assets/images/memoji-avatar-1.png";
+import memoji2 from "@/assets/images/memoji-avatar-2.png";
+import memoji3 from "@/assets/images/memoji-avatar-3.png";
+import memoji4 from "@/assets/images/memoji-avatar-4.png";
 
 export const TestimonialsSection = () => {
+  // Memoji mapping for certifications
+  const memojiMap = [memoji1, memoji2, memoji3, memoji4];
+  
+  // Custom descriptions for each certification
+  const getCertificationDescription = (certification: string) => {
+    if (certification.includes('AI & ML Virtual Internship')) {
+      return "I completed the Google AI/ML Virtual Internship, where I gained hands-on experience building and deploying machine learning models. I applied key concepts like computer vision and neural networks to solve real-world problems. This program enhanced my skills in developing and implementing AI solutions.";
+    } else if (certification.includes('Generative AI Internship')) {
+      return "I completed the Google Generative AI Virtual Internship, focusing on cutting-edge tools to create new content and applications. I gained expertise in prompt engineering and ethical AI development while using large language models like Gemini. This experience honed my ability to build innovative generative AI solutions.";
+    } else if (certification.includes('Cisco')) {
+      return "Comprehensive data analytics training covering essential tools and methodologies for business intelligence.";
+    } else if (certification.includes('EFSET')) {
+      return "Official English proficiency certification demonstrating advanced language skills for international opportunities.";
+    }
+    return "Professional certification demonstrating expertise and commitment to continuous learning.";
+  };
+  
   return (
     <section className="py-16 lg:py-24">
       <div className="container">
-        <SectionHeader eyebrow="Happy Clients" title="What Clients Say about Me" description="Don&apos;t just take my word for it. See what my clients have to say about my work." />
-        <div className="mt-12 lg:mt-20 flex overflow-x-clip [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)] py-4 -my-4">
-          <div className="flex gap-8 flex-none animate-move-left [animation-duration:90s] pr-8 hover:[animation-play-state:paused]">
-            {[...new Array(2).fill(0).map((_, index) => (
-              <Fragment key={index}>
-                {testimonials.map((testimonial) => (
-                  <Card key={`${testimonial.name}-${index}`} className="max-w-xs md:max-w-md p-6 md:p-8 hover:-rotate-3 transition duration-300 cursor-default">
-                    <div className="flex gap-4 items-center">
-                      <div className="size-14 bg-gray-700 inline-flex items-center justify-center rounded-full flex-shrink-0">
-                        <Image src={testimonial.avatar} alt={testimonial.name} className="max-h-full" />
-                      </div>
-                      <div>
-                        <div className="font-semibold">{testimonial.name}</div>
-                        <div className="text-sm text-white/40">{testimonial.position}</div>
-                      </div>
-                    </div>
-                    <p className="mt-4 md:mt-6 text-sm md:text-base">{testimonial.text}</p>
-                  </Card>
+        <SectionHeader 
+          eyebrow="Achievements" 
+          title="Certifications & Training" 
+          description="Professional certifications and specialized training programs I've completed." 
+        />
+        <div className="mt-12 lg:mt-20">
+          <div className="overflow-hidden">
+            <div className="flex [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)]">
+              <div className="flex flex-none gap-8 py-4 pr-8 animate-move-left [animation-duration:30s]">
+                {[...new Array(2)].fill(0).map((_, index) => (
+                  <div key={index} className="flex gap-8">
+                    {portfolioData.certifications.map((certification, certIndex) => (
+                      <motion.div
+                        key={`${certification}-${index}`}
+                        initial={{ opacity: 0, x: 50 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ 
+                          duration: 0.8, 
+                          delay: certIndex * 0.1,
+                          ease: "easeOut"
+                        }}
+                        className="w-96 bg-white/5 backdrop-blur-sm border border-white/20 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 group"
+                      >
+                        {/* Memoji Avatar */}
+                        <div className="flex items-center gap-4 mb-4">
+                          <div className="relative">
+                            <Image 
+                              src={memojiMap[certIndex % memojiMap.length]} 
+                              alt="Certification Avatar" 
+                              className="w-12 h-12 rounded-full"
+                              width={48}
+                              height={48}
+                            />
+                          </div>
+                          <div>
+                            <h3 className="font-semibold text-white/90 text-base">
+                              {certification.split(' — ')[0]}
+                            </h3>
+                            <p className="text-white/60 text-sm">
+                              {certification.split(' — ')[1] || 'Professional Certification'}
+                            </p>
+                          </div>
+                        </div>
+                        
+                        {/* Certification Details */}
+                        <div className="space-y-2">
+                          <p className="text-white/70 text-sm leading-relaxed">
+                            {getCertificationDescription(certification)}
+                          </p>
+                        </div>
+                      </motion.div>
+                    ))}
+                  </div>
                 ))}
-              </Fragment>
-            ))]}
-
+              </div>
+            </div>
           </div>
         </div>
       </div>
