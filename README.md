@@ -1,89 +1,118 @@
-# Darkfolio - A Modern Dark-Themed Portfolio Template
+# Hasanth Kumar Majji - Portfolio
 
 ![Next.js](https://img.shields.io/badge/Next.js-14.2.5-blue?style=flat-square)
 ![React](https://img.shields.io/badge/React-18-blue?style=flat-square)
 ![TailwindCSS](https://img.shields.io/badge/TailwindCSS-3.4.1-06B6D4?style=flat-square)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5-blue?style=flat-square)
 
-## Description
+## 👨‍💻 About Me
 
-**Darkfolio** is a sleek, dark-themed portfolio template built with modern web technologies. This template is perfect for developers and designers who want to showcase their work with style. The project leverages Next.js for server-side rendering and static site generation, React for building user interfaces, and TailwindCSS for utility-first styling. Framer Motion is used for smooth animations, enhancing the user experience with fluid transitions.
+I'm **Hasanth Kumar Majji**, a passionate software developer based in Hyderabad, Telangana. I specialize in building modern web applications and have a strong foundation in both frontend and backend technologies. I'm always excited to work on innovative projects and collaborate with like-minded professionals.
 
-## Live Demo
+## 🚀 Live Portfolio
 
-Check out the live demo of the application [here](https://dark-portfolio-template-demo.vercel.app/).
+Check out my live portfolio: [Portfolio Link](https://your-deployment-url.com)
 
-## Features
+## 🛠️ Tech Stack
 
-- **Dark Theme:** A clean and modern dark UI, perfect for portfolio sites.
-- **Responsive Design:** Works seamlessly on both desktop and mobile devices.
-- **Smooth Animations:** Powered by Framer Motion for a dynamic user experience.
-- **Highly Customizable:** Easy to adapt to your personal style and content.
+- **Frontend**: React, Next.js, TypeScript, TailwindCSS
+- **Backend**: Spring Boot, Node.js
+- **Database**: MongoDB, MySQL
+- **Other Tools**: Git, Docker, AWS
 
-## Installation
+## 🎯 Featured Projects
 
-To get a local copy up and running, follow these steps:
+### 1. **User Management System**
+- A microservices-based system built with Spring Boot, MongoDB Atlas, and JWT
+- Features authentication, user CRUD operations, and email notifications
+- **Tech**: Java, Spring Boot, MongoDB, JWT
+
+### 2. **HRMS Leave Portal**
+- Updated version with TypeScript implementation
+- **Tech**: TypeScript, HTML, CSS
+
+### 3. **Mental Health Chatbot using GenAI**
+- AI-powered chatbot for mental health support
+- **Tech**: Python, Generative AI
+
+### 4. **PDF Insights**
+- RAG system for PDF document analysis and Q&A
+- Built with Streamlit, Google Gemini AI, and FAISS vector database
+- **Tech**: Python, Streamlit, Google Gemini AI, FAISS
+
+## 📱 Contact Information
+
+- **Email**: [hasanthkumarmajji@gmail.com](mailto:hasanthkumarmajji@gmail.com)
+- **Location**: Hyderabad, Telangana, India
+- **LinkedIn**: [Hasanth Kumar Majji](https://www.linkedin.com/in/hasanth-kumar-majji-013420293)
+- **GitHub**: [@Hasanth-kumar](https://github.com/Hasanth-kumar)
+
+## 🚀 Getting Started
 
 ### Prerequisites
 
 - Node.js (v14 or higher)
 - npm (v6 or higher) or yarn
 
-### Clone the Repository
+### Installation
 
-```bash
-git clone https://github.com/rleite-it/dark-portfolio.git
-cd dark-portfolio
-```
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/Hasanth-kumar/portfolio.git
+   cd portfolio
+   ```
 
-### Install Dependencies
+2. **Install dependencies**
+   ```bash
+   npm install
+   # or
+   yarn install
+   ```
 
-```bash
-npm install
-# or
-yarn install
-```
+3. **Run the development server**
+   ```bash
+   npm run dev
+   # or
+   yarn dev
+   ```
 
-### Running Locally
-
-Start the development server:
-
-```bash
-npm run dev
-# or
-yarn dev
-```
-
-Open http://localhost:3000 with your browser to see the result.
+4. **Open your browser**
+   Navigate to [http://localhost:3000](http://localhost:3000) to view the portfolio
 
 ### Building for Production
 
-To create an optimized production build:
-
 ```bash
 npm run build
-# or
-yarn build
-```
-
-To start the production server:
-
-```bash
 npm run start
-# or
-yarn start
 ```
 
-## License
+## 🎨 Features
 
-This project is licensed under the MIT License. See the [LICENSE](./LICENSE) file for more details.
+- **Modern Design**: Clean, dark-themed UI with smooth animations
+- **Responsive Layout**: Optimized for all devices and screen sizes
+- **Interactive Elements**: Engaging user experience with hover effects and transitions
+- **SEO Optimized**: Built with Next.js for better search engine visibility
+- **Fast Performance**: Optimized for speed and user experience
 
-## Contributing
+## 📁 Project Structure
 
-Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+```
+src/
+├── app/           # Next.js app router
+├── components/    # Reusable UI components
+├── sections/      # Portfolio sections (Hero, About, Projects, etc.)
+├── data/          # Portfolio data and content
+└── assets/        # Images, icons, and other static assets
+```
 
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
+## 🤝 Let's Connect!
+
+I'm always open to discussing new opportunities, interesting projects, or just having a chat about technology. Feel free to reach out through any of the contact methods above!
+
+## 📄 License
+
+This project is licensed under the MIT License. See the [LICENSE](./LICENSE) file for details.
+
+---
+
+⭐ **Star this repository if you found it helpful!**
