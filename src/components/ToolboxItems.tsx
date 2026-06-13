@@ -44,6 +44,18 @@ export const ToolboxItems = ({
                 iconType = 'JS';
                 isEmoji = false;
                 break;
+            case 'typescript':
+                iconType = 'TS';
+                isEmoji = false;
+                break;
+            case 'sql':
+                iconType = 'SQL';
+                isEmoji = false;
+                break;
+            case 'c':
+                iconType = 'C';
+                isEmoji = false;
+                break;
             case 'react':
                 iconType = ReactIcon;
                 isSVG = true;

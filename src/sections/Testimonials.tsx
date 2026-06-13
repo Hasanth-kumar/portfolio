@@ -17,14 +17,14 @@ export const TestimonialsSection = () => {
   
   // Custom descriptions for each certification
   const getCertificationDescription = (certification: string) => {
-    if (certification.includes('AI & ML Virtual Internship')) {
-      return "I completed the Google AI/ML Virtual Internship, where I gained hands-on experience building and deploying machine learning models. I applied key concepts like computer vision and neural networks to solve real-world problems. This program enhanced my skills in developing and implementing AI solutions.";
-    } else if (certification.includes('Generative AI Internship')) {
-      return "I completed the Google Generative AI Virtual Internship, focusing on cutting-edge tools to create new content and applications. I gained expertise in prompt engineering and ethical AI development while using large language models like Gemini. This experience honed my ability to build innovative generative AI solutions.";
+    if (certification.includes('AI-ML Virtual Internship')) {
+      return "Completed the Google AI/ML Virtual Internship through AICTE, gaining hands-on experience building and deploying machine learning models with computer vision and neural networks.";
+    } else if (certification.includes('GenAI Virtual Internship')) {
+      return "Completed the Google Generative AI Virtual Internship through AICTE, focusing on prompt engineering, ethical AI development, and building applications with large language models.";
     } else if (certification.includes('Cisco')) {
       return "Comprehensive data analytics training covering essential tools and methodologies for business intelligence.";
-    } else if (certification.includes('EFSET')) {
-      return "Official English proficiency certification demonstrating advanced language skills for international opportunities.";
+    } else if (certification.includes('EF SET')) {
+      return "Official English proficiency certification at C2 level, demonstrating advanced language skills for international opportunities.";
     }
     return "Professional certification demonstrating expertise and commitment to continuous learning.";
   };

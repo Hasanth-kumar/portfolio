@@ -12,9 +12,9 @@ const calistoga = Calistoga({
 });
 
 export const metadata: Metadata = {
-  title: "Hasanth Kumar Majji - Software Developer Portfolio",
-  description: "Full-stack software developer specializing in React, Next.js, Spring Boot, and modern web technologies. View my projects and get in touch for collaborations.",
-  keywords: ["software developer", "full-stack developer", "React developer", "Next.js", "Spring Boot", "portfolio", "web development"],
+  title: "Hasanth Kumar Majji - Software Engineer Portfolio",
+  description: "Software engineer (SDE) specializing in full-stack development and applied machine learning. Built production-style systems with Java, Spring Boot, React, TypeScript, and Python.",
+  keywords: ["software engineer", "SDE", "full-stack developer", "applied machine learning", "Spring Boot", "React", "TypeScript", "portfolio"],
   authors: [{ name: "Hasanth Kumar Majji" }],
   creator: "Hasanth Kumar Majji",
   publisher: "Hasanth Kumar Majji",
@@ -24,13 +24,13 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: "https://portfolio-5km86sit9-hasanth-kumars-projects.vercel.app",
     siteName: "Hasanth Kumar Majji Portfolio",
-    title: "Hasanth Kumar Majji - Software Developer Portfolio",
-    description: "Full-stack software developer specializing in React, Next.js, Spring Boot, and modern web technologies. View my projects and get in touch for collaborations.",
+    title: "Hasanth Kumar Majji - Software Engineer Portfolio",
+    description: "Software engineer (SDE) specializing in full-stack development and applied machine learning. Built production-style systems with Java, Spring Boot, React, TypeScript, and Python.",
   },
   twitter: {
     card: "summary",
-    title: "Hasanth Kumar Majji - Software Developer Portfolio",
-    description: "Full-stack software developer specializing in React, Next.js, Spring Boot, and modern web technologies.",
+    title: "Hasanth Kumar Majji - Software Engineer Portfolio",
+    description: "Software engineer (SDE) specializing in full-stack development and applied machine learning.",
   },
   viewport: "width=device-width, initial-scale=1",
   category: "technology",

@@ -4,6 +4,7 @@ import Image from "next/image";
 import { useEffect } from "react";
 
 import { HeroOrbit } from "@/components/HeroOrbit";
+import { portfolioData } from "@/data/portfolio";
 
 import memojiImage from "@/assets/images/memoji-computer.png";
 import ArrowDown from "@/assets/icons/arrow-down.svg";
@@ -13,44 +14,43 @@ import SparkleIcon from "@/assets/icons/sparkle.svg";
 
 export const HeroSection = () => {
   const scrollToSection = (sectionId: string) => {
-    console.log(`Attempting to scroll to section: ${sectionId}`);
-    
-    // Try multiple selectors to find the section
-    const element = document.querySelector(`[data-section="${sectionId}"]`) || 
-                   document.getElementById(sectionId) ||
-                   document.querySelector(`#${sectionId}`);
-    
+    const element =
+      document.querySelector(`[data-section="${sectionId}"]`) ||
+      document.getElementById(sectionId) ||
+      document.querySelector(`#${sectionId}`);
+
     if (element) {
-      console.log(`Found element:`, element);
-      element.scrollIntoView({ 
-        behavior: 'smooth',
-        block: 'start'
+      element.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
       });
     } else {
-      console.log(`Element not found for section: ${sectionId}`);
-      // Fallback: scroll to top if section not found
       window.scrollTo({
         top: 0,
-        behavior: 'smooth'
+        behavior: "smooth",
       });
     }
   };
 
-  // Debug: Log when component mounts and check for sections
   useEffect(() => {
-    console.log('Hero component mounted');
     const projectsSection = document.querySelector('[data-section="projects"]');
     const contactSection = document.querySelector('[data-section="contact"]');
-    console.log('Projects section found:', !!projectsSection);
-    console.log('Contact section found:', !!contactSection);
+    if (!projectsSection || !contactSection) {
+      console.warn("Portfolio sections not found for scroll navigation");
+    }
   }, []);
+
+  const { hero } = portfolioData;
 
   return (
     <div className="py-32 md:py-48 lg:py-60 relative z-0 overflow-x-clip">
       <div className="absolute inset-0 [mask-image:linear-gradient(to_bottom,transparent,black_10%,black_70%,transparent)]">
-        <div className="absolute inset-0 -z-30 opacity-5" style={{
-          backgroundImage: `url(${grainImage.src})`,
-        }}></div>
+        <div
+          className="absolute inset-0 -z-30 opacity-5"
+          style={{
+            backgroundImage: `url(${grainImage.src})`,
+          }}
+        ></div>
         <div className="size-[620px] hero-ring"></div>
         <div className="size-[820px] hero-ring"></div>
         <div className="size-[1020px] hero-ring"></div>
@@ -96,28 +96,24 @@ export const HeroSection = () => {
             <div className="bg-green-500 size-2.5 rounded-full relative">
               <div className="bg-green-500 absolute inset-0 animate-ping-large rounded-full"></div>
             </div>
-            <div className="text-sm font-medium">Available for new projects</div>
+            <div className="text-sm font-medium">{hero.availability}</div>
           </div>
         </div>
         <div className="max-w-lg mx-auto">
-          <h1 className="font-serif text-3xl md:text-5xl text-center mt-8 tracking-wide">Hasanth Kumar Majji</h1>
-          <p className="mt-4 text-center text-white/60 md:text-lg">
-            Aspiring AI & ML Engineer | Full-Stack Developer | Problem Solver
-          </p>
-          <p className="mt-2 text-center text-white/40 text-sm">
-            📍 Hyderabad, Telangana
-          </p>
+          <h1 className="font-serif text-3xl md:text-5xl text-center mt-8 tracking-wide">{hero.name}</h1>
+          <p className="mt-4 text-center text-white/60 md:text-lg">{hero.tagline}</p>
+          <p className="mt-2 text-center text-white/40 text-sm">📍 {hero.location}</p>
         </div>
         <div className="flex flex-col md:flex-row justify-center items-center mt-8 gap-4 relative z-10">
-          <button 
-            onClick={() => scrollToSection('projects')}
+          <button
+            onClick={() => scrollToSection("projects")}
             className="inline-flex items-center gap-2 border border-white/15 px-6 h-12 rounded-xl hover:bg-white/5 transition-colors duration-200 cursor-pointer relative z-10"
           >
             <span className="font-semibold">Explore My Work</span>
             <ArrowDown className="size-4" />
           </button>
-          <button 
-            onClick={() => scrollToSection('contact')}
+          <button
+            onClick={() => scrollToSection("contact")}
             className="inline-flex items-center gap-2 border-white bg-white text-gray-900 h-12 px-6 rounded-xl hover:bg-gray-100 transition-colors duration-200 cursor-pointer relative z-10"
           >
             <span>🤝</span>

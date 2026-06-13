@@ -30,13 +30,13 @@ export const AboutSection = () => {
               <div className="px-6 pb-6 flex-1 flex flex-col">
                 {/* Institution Info */}
                 <div className="mb-6 p-4 bg-white/5 rounded-lg border border-white/10">
-                  <h3 className="font-semibold text-white/90 text-lg mb-3 leading-tight">Sreenidhi Institute of Science and Technology</h3>
+                  <h3 className="font-semibold text-white/90 text-lg mb-3 leading-tight">{portfolioData.education[0].institution.split(",")[0]}</h3>
                   <div className="space-y-2">
                     <p className="text-white/70 text-base font-medium">B.Tech in Information Technology</p>
-                    <p className="text-white/60 text-sm">Nov 2022 – Jun 2026</p>
+                    <p className="text-white/60 text-sm">{portfolioData.education[0].period}</p>
                     <div className="flex items-center gap-2">
-                      <span className="text-emerald-400 font-semibold">GPA:</span>
-                      <span className="text-white/80 text-base font-bold">8.7/10</span>
+                      <span className="text-emerald-400 font-semibold">CGPA:</span>
+                      <span className="text-white/80 text-base font-bold">{portfolioData.education[0].gpa}</span>
                     </div>
                   </div>
                 </div>
@@ -81,25 +81,38 @@ export const AboutSection = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-5 lg:grid-cols-3 gap-8">
             <Card className="h-[380px] flex flex-col md:col-span-3 lg:col-span-2">
-              <Card.Header title="Experience" description="My professional journey and achievements." className="px-6 py-6" />
-              <div className="px-6 pb-6 flex-1">
-                <div className="space-y-4">
+              <Card.Header
+                title="Experience"
+                description="My professional journey and achievements."
+                className="px-6 py-5 flex-shrink-0"
+              />
+              <div className="relative flex-1 min-h-0 px-6 pb-5">
+                <div className="h-full overflow-y-auto card-scroll pr-2 space-y-4">
                   {portfolioData.experience.map((exp, index) => (
-                    <div key={index} className="border-l-2 border-emerald-400/30 pl-4">
-                      <h3 className="font-semibold text-white/90 text-base mb-1">{exp.role}</h3>
-                      <p className="text-white/70 text-sm mb-1">{exp.company} • {exp.period}</p>
-                      <p className="text-white/60 text-xs mb-2">{exp.location}</p>
-                      <ul className="space-y-1">
+                    <div
+                      key={index}
+                      className="rounded-xl border border-white/10 bg-white/[0.03] p-4 border-l-2 border-l-emerald-400/50"
+                    >
+                      <h3 className="font-semibold text-white/90 text-sm md:text-base">{exp.role}</h3>
+                      <p className="text-white/70 text-xs md:text-sm mt-1">
+                        {exp.company} <span className="text-white/40">•</span> {exp.period}
+                      </p>
+                      <p className="text-white/50 text-xs mt-0.5">{exp.location}</p>
+                      <ul className="mt-3 space-y-1.5">
                         {exp.achievements.map((achievement, idx) => (
-                          <li key={idx} className="text-white/70 text-sm flex items-start gap-2">
-                            <span className="w-1.5 h-1.5 bg-emerald-400 rounded-full mt-2 flex-shrink-0"></span>
-                            {achievement}
+                          <li key={idx} className="text-white/65 text-xs md:text-sm flex items-start gap-2 leading-relaxed">
+                            <span className="w-1.5 h-1.5 bg-emerald-400 rounded-full mt-1.5 flex-shrink-0" />
+                            <span>{achievement}</span>
                           </li>
                         ))}
                       </ul>
                     </div>
                   ))}
                 </div>
+                <div
+                  className="pointer-events-none absolute bottom-5 left-6 right-8 h-10 bg-gradient-to-t from-gray-800 via-gray-800/90 to-transparent"
+                  aria-hidden="true"
+                />
               </div>
             </Card>
 

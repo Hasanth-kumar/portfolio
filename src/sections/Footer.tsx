@@ -1,13 +1,14 @@
 import ArrowUpRightIcon from "@/assets/icons/arrow-up-right.svg";
+import { portfolioData } from "@/data/portfolio";
 
 const footerLinks = [
   {
     title: "LinkedIn",
-    href: "https://www.linkedin.com/in/hasanth-kumar-majji-013420293",
+    href: portfolioData.contact.linkedin,
   },
   {
     title: "GitHub",
-    href: "https://github.com/Hasanth-kumar",
+    href: portfolioData.contact.github,
   },
 ]
 
