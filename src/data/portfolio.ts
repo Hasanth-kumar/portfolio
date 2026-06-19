@@ -60,7 +60,7 @@ export const portfolioData: PortfolioData = {
     phone: "+91 80742 48715",
     availability: "Open to SDE-1 opportunities",
     links: {
-      linkedin: "https://www.linkedin.com/in/hasanth-kumar-majji-013420293",
+      linkedin: "https://www.linkedin.com/in/hasanth-kumar-majji",
       github: "https://github.com/Hasanth-kumar",
     },
   },
@@ -214,7 +214,7 @@ export const portfolioData: PortfolioData = {
     email: "hasanthkumarmajji@gmail.com",
     phone: "+91 80742 48715",
     location: "Hyderabad, India",
-    linkedin: "https://www.linkedin.com/in/hasanth-kumar-majji-013420293",
+    linkedin: "https://www.linkedin.com/in/hasanth-kumar-majji",
     github: "https://github.com/Hasanth-kumar",
   },
 };
