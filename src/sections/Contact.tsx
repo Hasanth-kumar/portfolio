@@ -19,8 +19,8 @@ export const ContactSection = () => {
             <div>
               <h2 className="font-serif text-2xl md:text-3xl">Let&apos;s build something impactful together</h2>
               <p className="text-sm md:text-base mt-2">
-                Final-year B.Tech student and software engineer open to SDE-1 roles. I&apos;d love to connect about
-                full-stack development, applied ML, or your next product idea.
+                Software engineer specializing in full-stack development and applied machine learning. I&apos;d love to
+                connect about building impactful products, technical collaborations, or your next idea.
               </p>
               <div className="mt-4 text-sm space-y-1">
                 <p>
@@ -39,7 +39,7 @@ export const ContactSection = () => {
             <div className="flex flex-col sm:flex-row gap-3">
               <a
                 href={`mailto:${contact.email}`}
-                className="inline-flex text-white bg-gray-900 items-center px-6 h-12 rounded-xl gap-2 w-max border border-gray-900 hover:-rotate-3 transition duration-300"
+                className="inline-flex text-white bg-gray-900 items-center px-6 h-12 rounded-xl gap-2 w-max border border-gray-900 hover:bg-gray-800 transition-colors duration-200"
               >
                 <span className="font-semibold">Email Me</span>
                 <ArrowUpRightIcon className="size-4" />
@@ -48,7 +48,7 @@ export const ContactSection = () => {
                 href={contact.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex text-gray-900 bg-white/80 items-center px-6 h-12 rounded-xl gap-2 w-max border border-gray-900/20 hover:-rotate-3 transition duration-300"
+                className="inline-flex text-gray-900 bg-white/80 items-center px-6 h-12 rounded-xl gap-2 w-max border border-gray-900/20 hover:bg-white transition-colors duration-200"
               >
                 <span className="font-semibold">LinkedIn</span>
                 <ArrowUpRightIcon className="size-4" />
